@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![NeuralSync Banner](assets/robot_header_banner.jpeg)
+![NeuralSync Banner](https://raw.githubusercontent.com/khalilothmani/NeuralSync_AI-Powered-Prosthetic-Hand/master/assets/robot_header_banner.jpeg)
 
 **NeuralSync** is an open-source, AI-enhanced prosthetic hand powered by a Raspberry Pi 5.  
 It reads muscle signals via an EMG sensor, classifies objects with YOLOv11x computer vision,  
@@ -11,7 +11,7 @@ and drives 6 servo motors to perform 5 distinct grip patterns autonomously.
 <br>
 
 <p align="center">
-  <img src="assets/robot_full_view.jpeg" width="600" alt="NeuralSync Full View">
+  <img src="https://raw.githubusercontent.com/khalilothmani/NeuralSync_AI-Powered-Prosthetic-Hand/master/assets/robot_full_view.jpeg" width="600" alt="NeuralSync Full View">
   <br>
   <i>Full view of the NeuralSync robotic hand.</i>
 </p>
@@ -54,7 +54,7 @@ The hand uses a **passive return system** (elastic bands) to reopen fingers,
 with servos providing the closing force only — reducing heat and power draw.
 
 <p align="center">
-  <img src="assets/robot_360_rotation.mp4" width="600" />
+  <video src="https://raw.githubusercontent.com/khalilothmani/NeuralSync_AI-Powered-Prosthetic-Hand/master/assets/robot_360_rotation.mp4" width="600" autoplay loop muted playsinline></video>
   <br>
   <i>360° Viewing angles of the robotic assembly.</i>
 </p>
@@ -137,7 +137,7 @@ The hand mimics a simple toggle mechanism:
 Use for everyday grasping tasks where AI classification is not needed.
 
 <p align="center">
-  <img src="assets/robot_hand_open.jpeg" width="400" alt="Hand Open State">
+  <img src="https://raw.githubusercontent.com/khalilothmani/NeuralSync_AI-Powered-Prosthetic-Hand/master/assets/robot_hand_open.jpeg" width="400" alt="Hand Open State">
   <br>
   <i>Robot hand in its default open state.</i>
 </p>
@@ -168,7 +168,7 @@ Full object-aware adaptive gripping:
 | 4 | **PINCH** | Thumb + Index only | Coin, key, chip, small objects |
 
 <p align="center">
-  <img src="assets/robot_grabbing_demo.mp4" width="400" />
+  <video src="https://raw.githubusercontent.com/khalilothmani/NeuralSync_AI-Powered-Prosthetic-Hand/master/assets/robot_grabbing_demo.mp4" width="400" autoplay loop muted playsinline></video>
   <br>
   <i>Demonstration of the power grab functionality.</i>
 </p>
@@ -289,7 +289,7 @@ See **[`docs/WIRING.md`](docs/WIRING.md)** for the complete pin-by-pin connectio
 - PCA9685 → Servo cable routing
 
 <p align="center">
-  <img src="assets/circuit_overview.jpeg" width="600" alt="Circuit Overview">
+  <img src="https://raw.githubusercontent.com/khalilothmani/NeuralSync_AI-Powered-Prosthetic-Hand/master/assets/circuit_overview.jpeg" width="600" alt="Circuit Overview">
   <br>
   <i>General overview of the electronic circuit.</i>
 </p>
