@@ -54,7 +54,7 @@ The hand uses a **passive return system** (elastic bands) to reopen fingers,
 with servos providing the closing force only — reducing heat and power draw.
 
 <p align="center">
-  <video src="https://raw.githubusercontent.com/khalilothmani/NeuralSync_AI-Powered-Prosthetic-Hand/master/assets/robot_360_rotation.mp4" width="600" autoplay loop muted playsinline></video>
+  <video src="assets/robot_360_rotation.mp4" width="600" autoplay loop muted playsinline></video>
   <br>
   <i>360° Viewing angles of the robotic assembly.</i>
 </p>
@@ -100,25 +100,25 @@ Battery arrangement (4 × 3.7V):
 ┌──────────────────────────────────────────────────────────────────┐
 │                        Raspberry Pi 5                            │
 │                                                                  │
-│   ┌─────────────┐    I²C     ┌──────────────┐                   │
-│   │  ADS1115    │◄──────────►│   main.py    │                   │
-│   │  (EMG ADC)  │           │              │                   │
-│   └─────────────┘           │  Mode 1:     │                   │
-│                             │  EMG → Grab  │                   │
-│   ┌─────────────┐    I²C     │              │                   │
-│   │  PCA9685    │◄──────────►│  Mode 2:     │                   │
-│   │ Servo Driver│           │  EMG →       │                   │
-│   └──────┬──────┘           │  Camera →    │                   │
-│          │ PWM×6            │  YOLO →      │                   │
-│   ┌──────▼──────────────┐   │  Grab        │                   │
-│   │ 6 × Servo Motors    │   └──────────────┘                   │
-│   │ (Index/Middle/Ring/ │        │  GPIO                        │
-│   │  Pinky/Thumb×2)     │        ├── Torch (GPIO22)            │
-│   └─────────────────────┘        ├── Buzzer (GPIO18)           │
-│                                  ├── Power LED (GPIO27)         │
-│   ┌─────────────────────┐        └── Mode Switch (GPIO17)       │
+│   ┌─────────────┐    I²C     ┌──────────────┐                    │
+│   │  ADS1115    │◄──────────►│   main.py    │                    │
+│   │  (EMG ADC)  │           │              │                     │
+│   └─────────────┘           │  Mode 1:     │                     │
+│                             │  EMG → Grab  │                     │
+│   ┌─────────────┐    I²C     │              │                    │
+│   │  PCA9685    │◄──────────►│  Mode 2:     │                    │
+│   │ Servo Driver│           │  EMG →       │                     │
+│   └──────┬──────┘           │  Camera →    │                     │
+│          │ PWM×6            │  YOLO →      │                     │
+│   ┌──────▼──────────────┐   │  Grab        │                     │
+│   │ 6 × Servo Motors    │   └──────────────┘                     │
+│   │ (Index/Middle/Ring/ │        │  GPIO                         │
+│   │  Pinky/Thumb×2)     │        ├── Torch (GPIO22)              │
+│   └─────────────────────┘        ├── Buzzer (GPIO18)             │
+│                                  ├── Power LED (GPIO27)          │
+│   ┌─────────────────────┐        └── Mode Switch (GPIO17)        │
 │   │ RPi Camera 2 (5MP)  │                                        │
-│   │ → captured_frame.jpg│◄── libcamera / V4L2                   │
+│   │ → captured_frame.jpg│◄── libcamera / V4L2                    │
 │   └─────────────────────┘                                        │
 └──────────────────────────────────────────────────────────────────┘
 ```
@@ -168,7 +168,7 @@ Full object-aware adaptive gripping:
 | 4 | **PINCH** | Thumb + Index only | Coin, key, chip, small objects |
 
 <p align="center">
-  <video src="https://raw.githubusercontent.com/khalilothmani/NeuralSync_AI-Powered-Prosthetic-Hand/master/assets/robot_grabbing_demo.mp4" width="400" autoplay loop muted playsinline></video>
+  <video src="assets/robot_grabbing_demo.mp4" width="400" autoplay loop muted playsinline></video>
   <br>
   <i>Demonstration of the power grab functionality.</i>
 </p>
