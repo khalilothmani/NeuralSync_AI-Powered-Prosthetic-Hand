@@ -1,0 +1,74 @@
+# ============================================================
+#  NeuralSync Prosthetic Hand — Central Configuration
+# ============================================================
+
+# ---- EMG / ADS1115 ----
+emg:
+  i2c_address: 0x48           # ADS1115 default I2C address
+  channel: 0                  # AIN0 channel on ADS1115
+  threshold: 10000            # Raw ADC unit threshold for grab trigger
+  sample_rate: 860            # Samples per second (ADS1115 max)
+  cooldown_seconds: 1.0       # Seconds between consecutive triggers
+
+# ---- PCA9685 Servo Driver ----
+pca9685:
+  i2c_address: 0x40           # PCA9685 default I2C address
+  frequency: 50               # PWM frequency in Hz (standard servo)
+
+# ---- Servo Channel Mapping ----
+# Fingers: Index=0, Middle=1, Ring=2, Pinky=3
+# Thumb rotation=4, Thumb flex=5
+servos:
+  index_finger:   0
+  middle_finger:  1
+  ring_finger:    2
+  pinky_finger:   3
+  thumb_rotation: 4
+  thumb_flex:     5
+
+# ---- Servo Pulse Widths (microseconds converted to PCA ticks @ 50Hz) ----
+# Tick = pulse_us / 20000 * 4096
+# Open (0 deg) ≈ 102 ticks | Closed (180 deg) ≈ 512 ticks
+servo_limits:
+  open_tick:            102   # ~500us — fully open / relaxed
+  mid_open_tick:        204   # ~1000us — partially open
+  neutral_tick:         307   # ~1500us — neutral midpoint
+  mid_close_tick:       409   # ~2000us — partially closed
+  closed_tick:          512   # ~2500us — fully closed
+
+# ---- GPIO Pin Assignments (BCM numbering) ----
+gpio:
+  mode_switch:     17   # Mode 1/2 toggle switch input (pull-up)
+  power_led:       27   # Green LED — system ON indicator
+  torch:           22   # Digital torch / flashlight GPIO
+  buzzer:          18   # Passive buzzer PWM pin
+
+# ---- Camera ----
+camera:
+  device_index:  0         # /dev/video0 (Raspberry Pi Camera 2 via libcamera)
+  width:         1920
+  height:        1080
+  capture_width: 640       # Resolution used for YOLO inference
+  capture_height: 480
+  warmup_frames: 5         # Frames to discard before capture (auto-exposure)
+
+# ---- YOLO Model ----
+yolo:
+  model_path:    "yolo11x.pt"   # Ultralytics YOLOv11 X-large model
+  confidence:    0.35           # Minimum detection confidence
+  iou_threshold: 0.45
+  device:        "cpu"          # Use "cuda" if GPU available
+
+# ---- Buzzer Patterns (frequency Hz, duration ms) ----
+buzzer_patterns:
+  system_on:      [[440, 150], [880, 200]]
+  mode_1:         [[523, 200]]
+  mode_2:         [[784, 150], [1046, 200]]
+  grab_sensitive: [[330, 100], [330, 100]]
+  grab_light:     [[440, 150]]
+  grab_medium:    [[523, 200]]
+  grab_heavy:     [[659, 250]]
+  grab_pinch:     [[880, 100], [1046, 150]]
+  release:        [[330, 300]]
+  error:          [[200, 500], [200, 500], [200, 500]]
+  capture:        [[1046, 80]]

@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Weights & large model files (tracked via Git LFS or downloaded separately)
+*.pt
+*.onnx
+*.tflite
+*.pkl
+
+# Captured frames (runtime artefacts)
+captured_frame.jpg
+captured_frame.png
+
+# Logs
+*.log
+logs/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Raspberry Pi / secrets
+*.env
+secrets.yaml

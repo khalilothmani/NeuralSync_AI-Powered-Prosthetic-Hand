@@ -1,0 +1,22 @@
+# NeuralSync — Python Dependencies
+#
+# Install on Raspberry Pi 5 with:
+#   pip3 install -r requirements.txt
+#
+# Note: RPi.GPIO, board, busio are automatically available when using
+# the system Python on Raspberry Pi OS (no pip install needed).
+# For a venv, install 'adafruit-blinka' instead.
+
+# ── Computer Vision ──────────────────────────────────────────────────────────
+ultralytics>=8.3.0          # YOLOv11 inference engine
+opencv-python-headless>=4.9 # Camera capture & image I/O (headless for RPi)
+
+# ── Hardware / GPIO ──────────────────────────────────────────────────────────
+adafruit-circuitpython-pca9685>=3.4.13   # PCA9685 PWM servo driver
+adafruit-circuitpython-motor>=3.4.13     # Servo abstraction on PCA9685
+adafruit-circuitpython-ads1x15>=2.3.6    # ADS1115 ADC (EMG signal)
+adafruit-blinka>=8.43.0                  # CircuitPython compatibility layer
+
+# ── Utilities ────────────────────────────────────────────────────────────────
+PyYAML>=6.0       # Config file parsing
+numpy>=1.24       # Required by ultralytics & opencv
