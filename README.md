@@ -156,7 +156,7 @@ Full object-aware adaptive gripping:
 ```
 NeuralSync/
 ├── main.py                    # Entry point — main control loop
-├── yolo.py                    # Diagnostic YOLO viewer (desktop/testing)
+├── hand_vision.py                 # Diagnostic YOLO viewer (desktop/testing)
 ├── yolo11x.pt                 # YOLOv11x weights (download separately)
 ├── requirements.txt           # Python dependencies
 ├── .gitignore

@@ -1,7 +1,7 @@
 """
-yolo.py
+hand_vision.py
 ==============
-NeuralSync — YOLO live detection viewer (for desktop testing).
+NeuralSync — Live object detection viewer (for desktop testing).
 
 Run this on a PC or the Raspberry Pi with a display attached to
 visually verify that the YOLOv11x model correctly detects and
@@ -12,11 +12,11 @@ This script is a diagnostic / demonstration tool.
 
 Usage
 -----
-    python3 yolo.py                    # Use default webcam
-    python3 yolo.py --source 1         # Use /dev/video1
-    python3 yolo.py --source image.jpg # Run on a static image
-    python3 yolo.py --labels           # Print all known class labels
-    python3 yolo.py --categories egg water_bottle coin  # Lookup categories
+    python3 hand_vision.py                    # Use default webcam
+    python3 hand_vision.py --source 1         # Use /dev/video1
+    python3 hand_vision.py --source image.jpg # Run on a static image
+    python3 hand_vision.py --labels           # Print all known class labels
+    python3 hand_vision.py --categories egg water_bottle coin  # Lookup categories
 """
 
 import argparse
@@ -62,7 +62,7 @@ def run_live(source):
     cap.set(cv2.CAP_PROP_FRAME_WIDTH,  640)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
 
-    print(f"NeuralSync YOLO Viewer — source={source}  |  q to quit")
+    print(f"NeuralSync Hand Vision — source={source}  |  q to quit")
 
     while cap.isOpened():
         ok, frame = cap.read()
@@ -142,7 +142,7 @@ def lookup_categories(labels: list[str]):
 
 # ── CLI ───────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="NeuralSync YOLOv11x Viewer")
+    parser = argparse.ArgumentParser(description="NeuralSync Hand Vision — YOLOv11x Object Viewer")
     parser.add_argument("--source",     default="0",
                         help="Camera index (int) or image/video path")
     parser.add_argument("--labels",     action="store_true",

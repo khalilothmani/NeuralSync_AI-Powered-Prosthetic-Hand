@@ -48,7 +48,7 @@ logging.basicConfig(
 logger = logging.getLogger("NeuralSync.main")
 
 # ── Configuration ─────────────────────────────────────────────────────────────
-_CONFIG_PATH = Path(__file__).resolve().parent.parent / "config" / "config.yaml"
+_CONFIG_PATH = Path(__file__).resolve().parent / "config" / "config.yaml"
 with open(_CONFIG_PATH) as f:
     _CFG = yaml.safe_load(f)
 
