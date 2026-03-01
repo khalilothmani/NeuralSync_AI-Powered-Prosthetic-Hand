@@ -2,11 +2,19 @@
 
 <div align="center">
 
-![NeuralSync Banner](assets/banner.png)
+![NeuralSync Banner](assets/robot_header_banner.png)
 
 **NeuralSync** is an open-source, AI-enhanced prosthetic hand powered by a Raspberry Pi 5.  
 It reads muscle signals via an EMG sensor, classifies objects with YOLOv11x computer vision,  
 and drives 6 servo motors to perform 5 distinct grip patterns autonomously.
+
+<br>
+
+<p align="center">
+  <img src="assets/robot_full_view.jpeg" width="600" alt="NeuralSync Full View">
+  <br>
+  <i>Full view of the NeuralSync robotic hand.</i>
+</p>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11+-green.svg)](https://python.org)
@@ -44,6 +52,12 @@ NeuralSync replaces a missing hand with an intelligent robotic limb. It operates
 
 The hand uses a **passive return system** (elastic bands) to reopen fingers,  
 with servos providing the closing force only — reducing heat and power draw.
+
+<p align="center">
+  <video src="assets/robot_360_rotation.mp4" width="600" autoplay loop muted></video>
+  <br>
+  <i>360° Viewing angles of the robotic assembly.</i>
+</p>
 
 ---
 
@@ -122,6 +136,12 @@ The hand mimics a simple toggle mechanism:
 
 Use for everyday grasping tasks where AI classification is not needed.
 
+<p align="center">
+  <img src="assets/robot_hand_open.jpeg" width="400" alt="Hand Open State">
+  <br>
+  <i>Robot hand in its default open state.</i>
+</p>
+
 ### Mode 2 — AI Vision Mode 🤖
 
 Full object-aware adaptive gripping:
@@ -146,6 +166,12 @@ Full object-aware adaptive gripping:
 | 2 | **SENSITIVE** | Partial close, slow motion | Egg, glass, fragile items |
 | 3 | **LIGHT** | 3/4 close, moderate force | Pen, fruit, paper cup |
 | 4 | **PINCH** | Thumb + Index only | Coin, key, chip, small objects |
+
+<p align="center">
+  <video src="assets/robot_grabbing_demo.mp4" width="400" autoplay loop muted></video>
+  <br>
+  <i>Demonstration of the power grab functionality.</i>
+</p>
 
 > See [`docs/GRABS.md`](docs/GRABS.md) for servo angles and mechanical details.
 
@@ -181,7 +207,12 @@ NeuralSync/
 │   └── OBJECT_LISTS.md        # Full grab-category object lists
 │
 └── assets/
-    └── banner.png             # README banner image
+    ├── robot_header_banner.png    # README banner image
+    ├── robot_hand_open.jpeg       # Hand in open state
+    ├── robot_grabbing_demo.mp4    # Power grab demonstration
+    ├── robot_full_view.jpeg       # Full assembly view
+    ├── circuit_overview.jpeg      # Hardware wiring overview
+    └── robot_360_rotation.mp4     # 360 rotation showcase
 ```
 
 ---
@@ -256,6 +287,12 @@ See **[`docs/WIRING.md`](docs/WIRING.md)** for the complete pin-by-pin connectio
 - EMG sensor bipolar power supply
 - RPi 5 power from 2S1P LiPo
 - PCA9685 → Servo cable routing
+
+<p align="center">
+  <img src="assets/circuit_overview.jpeg" width="600" alt="Circuit Overview">
+  <br>
+  <i>General overview of the electronic circuit.</i>
+</p>
 
 ---
 
