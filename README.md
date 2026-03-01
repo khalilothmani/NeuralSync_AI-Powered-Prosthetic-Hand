@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![NeuralSync Banner](assets/robot_header_banner.png)
+![NeuralSync Banner](assets/robot_header_banner.jpeg)
 
 **NeuralSync** is an open-source, AI-enhanced prosthetic hand powered by a Raspberry Pi 5.  
 It reads muscle signals via an EMG sensor, classifies objects with YOLOv11x computer vision,  
@@ -54,7 +54,7 @@ The hand uses a **passive return system** (elastic bands) to reopen fingers,
 with servos providing the closing force only — reducing heat and power draw.
 
 <p align="center">
-  <video src="assets/robot_360_rotation.mp4" width="600" autoplay loop muted></video>
+  <img src="assets/robot_360_rotation.mp4" width="600" />
   <br>
   <i>360° Viewing angles of the robotic assembly.</i>
 </p>
@@ -168,7 +168,7 @@ Full object-aware adaptive gripping:
 | 4 | **PINCH** | Thumb + Index only | Coin, key, chip, small objects |
 
 <p align="center">
-  <video src="assets/robot_grabbing_demo.mp4" width="400" autoplay loop muted></video>
+  <img src="assets/robot_grabbing_demo.mp4" width="400" />
   <br>
   <i>Demonstration of the power grab functionality.</i>
 </p>
@@ -207,7 +207,7 @@ NeuralSync/
 │   └── OBJECT_LISTS.md        # Full grab-category object lists
 │
 └── assets/
-    ├── robot_header_banner.png    # README banner image
+    ├── robot_header_banner.jpeg   # README banner image
     ├── robot_hand_open.jpeg       # Hand in open state
     ├── robot_grabbing_demo.mp4    # Power grab demonstration
     ├── robot_full_view.jpeg       # Full assembly view
