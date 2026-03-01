@@ -239,10 +239,10 @@ python3 main.py --simulate
 ### 7. Run the YOLO diagnostic viewer (optional, needs display)
 
 ```bash
-python3 yolo.py                         # Webcam
-python3 yolo.py --source image.jpg      # Static image
-python3 yolo.py --labels                # Print all 80 COCO classes + categories
-python3 yolo.py --categories egg water_bottle coin  # Query grab category
+python3 hand_vision.py                         # Webcam
+python3 hand_vision.py --source image.jpg      # Static image
+python3 hand_vision.py --labels                # Print all 80 COCO classes + categories
+python3 hand_vision.py --categories egg water_bottle coin  # Query grab category
 ```
 
 ---
